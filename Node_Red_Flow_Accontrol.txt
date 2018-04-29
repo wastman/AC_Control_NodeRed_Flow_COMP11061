@@ -566,6 +566,59 @@
         "wires": []
     },
     {
+        "id": "1b15e10e.e8e51f",
+        "type": "ui_button",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "group": "f7b2acf8.11816",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "OFF",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "4",
+        "payloadType": "num",
+        "topic": "",
+        "x": 90,
+        "y": 1040,
+        "wires": [
+            [
+                "69e60b7b.95c6f4",
+                "4d97a803.65fdd8"
+            ]
+        ]
+    },
+    {
+        "id": "69e60b7b.95c6f4",
+        "type": "mqtt out",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "topic": "AcControl/Mode",
+        "qos": "",
+        "retain": "",
+        "broker": "a5bd7de0.1db0b",
+        "x": 680,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "4d97a803.65fdd8",
+        "type": "debug",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 670,
+        "y": 1100,
+        "wires": []
+    },
+    {
         "id": "eb659228.dae8d",
         "type": "function",
         "z": "74cdc253.e4c35c",
