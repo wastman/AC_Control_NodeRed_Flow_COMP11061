@@ -145,6 +145,53 @@
         "wires": []
     },
     {
+        "id": "ae63ce66.ae728",
+        "type": "mqtt in",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "topic": "AcControl/Status/Heat",
+        "qos": "2",
+        "broker": "a5bd7de0.1db0b",
+        "x": 140,
+        "y": 280,
+        "wires": [
+            [
+                "744fd3ea.dd232c",
+                "39027fa9.2d032"
+            ]
+        ]
+    },
+    {
+        "id": "744fd3ea.dd232c",
+        "type": "ui_text",
+        "z": "74cdc253.e4c35c",
+        "group": "65a852b8.02958c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "HEAT",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 650,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "39027fa9.2d032",
+        "type": "debug",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 670,
+        "y": 320,
+        "wires": []
+    },
+    {
         "id": "2d69ce87.9485e2",
         "type": "ui_gauge",
         "z": "74cdc253.e4c35c",
@@ -199,6 +246,17 @@
         "birthTopic": "",
         "birthQos": "0",
         "birthPayload": ""
+    },
+    {
+        "id": "65a852b8.02958c",
+        "type": "ui_group",
+        "z": "",
+        "name": "AC Status",
+        "tab": "ed1d65e5.be8dd8",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
     },
     {
         "id": "de91e4a8.9e0568",
