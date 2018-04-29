@@ -211,6 +211,54 @@
         "wires": []
     },
     {
+        "id": "438a73ed.e268fc",
+        "type": "mqtt in",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "topic": "AcControl/Status/RFID",
+        "qos": "2",
+        "broker": "a5bd7de0.1db0b",
+        "x": 140,
+        "y": 600,
+        "wires": [
+            [
+                "d4135e38.554c9",
+                "20d21897.657698",
+                "eb659228.dae8d"
+            ]
+        ]
+    },
+    {
+        "id": "d4135e38.554c9",
+        "type": "ui_text",
+        "z": "74cdc253.e4c35c",
+        "group": "f22ce4ef.ebd7a8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "LAST RFID#",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 670,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "20d21897.657698",
+        "type": "debug",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 670,
+        "y": 640,
+        "wires": []
+    },
+    {
         "id": "39027fa9.2d032",
         "type": "debug",
         "z": "74cdc253.e4c35c",
@@ -359,6 +407,41 @@
         "wires": []
     },
     {
+        "id": "eb659228.dae8d",
+        "type": "function",
+        "z": "74cdc253.e4c35c",
+        "name": "RFID_Function",
+        "func": "var listRFID=context.get('listRFID') || \"<hr>\";\nvar timeRFIDscan= Date();\ntimeRFIDscan=timeRFIDscan.toLocaleString();\nmsg.payload =\"<hr>\" + \"RFID#:\" + msg.payload + \"<br>\" + timeRFIDscan + listRFID; \ncontext.set('listRFID', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 680,
+        "wires": [
+            [
+                "a0e4c60f.e71dd8"
+            ]
+        ]
+    },
+    {
+        "id": "a0e4c60f.e71dd8",
+        "type": "ui_template",
+        "z": "74cdc253.e4c35c",
+        "group": "f22ce4ef.ebd7a8",
+        "name": "",
+        "order": 0,
+        "width": "6",
+        "height": "7",
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 660,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "bc571ba2.cb1408",
         "type": "ui_group",
         "z": "",
@@ -395,6 +478,17 @@
         "name": "AC Status",
         "tab": "ed1d65e5.be8dd8",
         "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "f22ce4ef.ebd7a8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Entrance Control",
+        "tab": "ed1d65e5.be8dd8",
+        "order": 4,
         "disp": true,
         "width": "6",
         "collapse": false
