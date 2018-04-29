@@ -265,6 +265,53 @@
         "wires": []
     },
     {
+        "id": "8e04eb2f.68bd88",
+        "type": "mqtt in",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "topic": "AcControl/Status/Mode",
+        "qos": "2",
+        "broker": "a5bd7de0.1db0b",
+        "x": 140,
+        "y": 440,
+        "wires": [
+            [
+                "157f245b.376a2c",
+                "f4d026ef.a52f88"
+            ]
+        ]
+    },
+    {
+        "id": "157f245b.376a2c",
+        "type": "ui_text",
+        "z": "74cdc253.e4c35c",
+        "group": "65a852b8.02958c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "MODE",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 650,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "f4d026ef.a52f88",
+        "type": "debug",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 670,
+        "y": 480,
+        "wires": []
+    },
+    {
         "id": "bc571ba2.cb1408",
         "type": "ui_group",
         "z": "",
