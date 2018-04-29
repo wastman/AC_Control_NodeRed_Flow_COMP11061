@@ -145,6 +145,100 @@
         "wires": []
     },
     {
+        "id": "ae63ce66.ae728",
+        "type": "mqtt in",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "topic": "AcControl/Status/Heat",
+        "qos": "2",
+        "broker": "a5bd7de0.1db0b",
+        "x": 140,
+        "y": 280,
+        "wires": [
+            [
+                "744fd3ea.dd232c",
+                "39027fa9.2d032"
+            ]
+        ]
+    },
+    {
+        "id": "ecc9284d.8b1448",
+        "type": "mqtt in",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "topic": "AcControl/Status/Cool",
+        "qos": "2",
+        "broker": "a5bd7de0.1db0b",
+        "x": 140,
+        "y": 360,
+        "wires": [
+            [
+                "d23ae214.b0ce2",
+                "a70baf07.449a4"
+            ]
+        ]
+    },
+    {
+        "id": "744fd3ea.dd232c",
+        "type": "ui_text",
+        "z": "74cdc253.e4c35c",
+        "group": "65a852b8.02958c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "HEAT",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 650,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "d23ae214.b0ce2",
+        "type": "ui_text",
+        "z": "74cdc253.e4c35c",
+        "group": "65a852b8.02958c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "COOL",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 650,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "39027fa9.2d032",
+        "type": "debug",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 670,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a70baf07.449a4",
+        "type": "debug",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 670,
+        "y": 400,
+        "wires": []
+    },
+    {
         "id": "2d69ce87.9485e2",
         "type": "ui_gauge",
         "z": "74cdc253.e4c35c",
@@ -168,6 +262,100 @@
         "seg2": "",
         "x": 670,
         "y": 240,
+        "wires": []
+    },
+    {
+        "id": "8e04eb2f.68bd88",
+        "type": "mqtt in",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "topic": "AcControl/Status/Mode",
+        "qos": "2",
+        "broker": "a5bd7de0.1db0b",
+        "x": 140,
+        "y": 440,
+        "wires": [
+            [
+                "157f245b.376a2c",
+                "f4d026ef.a52f88"
+            ]
+        ]
+    },
+    {
+        "id": "157f245b.376a2c",
+        "type": "ui_text",
+        "z": "74cdc253.e4c35c",
+        "group": "65a852b8.02958c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "MODE",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 650,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "f4d026ef.a52f88",
+        "type": "debug",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 670,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "92d8569.e9635a8",
+        "type": "mqtt in",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "topic": "AcControl/Status/Sensor",
+        "qos": "2",
+        "broker": "a5bd7de0.1db0b",
+        "x": 150,
+        "y": 520,
+        "wires": [
+            [
+                "477f5e61.5a0a4",
+                "ef709e6c.cd86a"
+            ]
+        ]
+    },
+    {
+        "id": "477f5e61.5a0a4",
+        "type": "ui_text",
+        "z": "74cdc253.e4c35c",
+        "group": "65a852b8.02958c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "SENSOR",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 660,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "ef709e6c.cd86a",
+        "type": "debug",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 670,
+        "y": 560,
         "wires": []
     },
     {
@@ -199,6 +387,17 @@
         "birthTopic": "",
         "birthQos": "0",
         "birthPayload": ""
+    },
+    {
+        "id": "65a852b8.02958c",
+        "type": "ui_group",
+        "z": "",
+        "name": "AC Status",
+        "tab": "ed1d65e5.be8dd8",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
     },
     {
         "id": "de91e4a8.9e0568",
