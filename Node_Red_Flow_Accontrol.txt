@@ -312,6 +312,53 @@
         "wires": []
     },
     {
+        "id": "92d8569.e9635a8",
+        "type": "mqtt in",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "topic": "AcControl/Status/Sensor",
+        "qos": "2",
+        "broker": "a5bd7de0.1db0b",
+        "x": 150,
+        "y": 520,
+        "wires": [
+            [
+                "477f5e61.5a0a4",
+                "ef709e6c.cd86a"
+            ]
+        ]
+    },
+    {
+        "id": "477f5e61.5a0a4",
+        "type": "ui_text",
+        "z": "74cdc253.e4c35c",
+        "group": "65a852b8.02958c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "SENSOR",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 660,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "ef709e6c.cd86a",
+        "type": "debug",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 670,
+        "y": 560,
+        "wires": []
+    },
+    {
         "id": "bc571ba2.cb1408",
         "type": "ui_group",
         "z": "",
