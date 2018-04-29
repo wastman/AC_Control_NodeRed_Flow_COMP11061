@@ -162,6 +162,23 @@
         ]
     },
     {
+        "id": "ecc9284d.8b1448",
+        "type": "mqtt in",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "topic": "AcControl/Status/Cool",
+        "qos": "2",
+        "broker": "a5bd7de0.1db0b",
+        "x": 140,
+        "y": 360,
+        "wires": [
+            [
+                "d23ae214.b0ce2",
+                "a70baf07.449a4"
+            ]
+        ]
+    },
+    {
         "id": "744fd3ea.dd232c",
         "type": "ui_text",
         "z": "74cdc253.e4c35c",
@@ -178,6 +195,22 @@
         "wires": []
     },
     {
+        "id": "d23ae214.b0ce2",
+        "type": "ui_text",
+        "z": "74cdc253.e4c35c",
+        "group": "65a852b8.02958c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "COOL",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 650,
+        "y": 360,
+        "wires": []
+    },
+    {
         "id": "39027fa9.2d032",
         "type": "debug",
         "z": "74cdc253.e4c35c",
@@ -189,6 +222,20 @@
         "complete": "false",
         "x": 670,
         "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a70baf07.449a4",
+        "type": "debug",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 670,
+        "y": 400,
         "wires": []
     },
     {
