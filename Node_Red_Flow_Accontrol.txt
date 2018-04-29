@@ -114,6 +114,63 @@
         "wires": []
     },
     {
+        "id": "de2e055.88241f8",
+        "type": "mqtt in",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "topic": "AcControl/Status/TempratureEquipmentroom",
+        "qos": "2",
+        "broker": "a5bd7de0.1db0b",
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "501a57b5.b2fdb8",
+                "2d69ce87.9485e2"
+            ]
+        ]
+    },
+    {
+        "id": "501a57b5.b2fdb8",
+        "type": "debug",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 670,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "2d69ce87.9485e2",
+        "type": "ui_gauge",
+        "z": "74cdc253.e4c35c",
+        "name": "",
+        "group": "de91e4a8.9e0568",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "Celsius degree",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "60",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 670,
+        "y": 240,
+        "wires": []
+    },
+    {
         "id": "bc571ba2.cb1408",
         "type": "ui_group",
         "z": "",
@@ -142,6 +199,17 @@
         "birthTopic": "",
         "birthQos": "0",
         "birthPayload": ""
+    },
+    {
+        "id": "de91e4a8.9e0568",
+        "type": "ui_group",
+        "z": "",
+        "name": "Equipment room",
+        "tab": "ed1d65e5.be8dd8",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
     },
     {
         "id": "ed1d65e5.be8dd8",
